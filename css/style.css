@@ -1,0 +1,98 @@
+.circle-box {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+@-webkit-keyframes circleScale {
+    from {
+        background-color: pink;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        background-color: orange;
+        -webkit-transform: scale(200);
+        transform: scale(200);
+    }
+}
+
+@keyframes circleScale {
+    from {
+        background-color: pink;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        background-color: orange;
+        -webkit-transform: scale(200);
+        transform: scale(200);
+    }
+}
+
+@-webkit-keyframes textAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation-name: circleScale;
+    animation-name: circleScale;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.text {
+    width: 600px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    font-weight: 700;
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50vw;
+    bottom: 50vw;
+    margin: auto;
+    -webkit-transition: -webkit-transform 3s ease-in-out;
+    transition: -webkit-transform 3s ease-in-out;
+    transition: transform 3s ease-in-out;
+    transition: transform 3s ease-in-out, -webkit-transform 3s ease-in-out;
+    -webkit-animation-name: textAnimation;
+    animation-name: textAnimation;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
